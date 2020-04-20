@@ -6,14 +6,14 @@ import json
 questions = open("badQuestions.txt").read().split("\n")
 
 def get_question(question):
-	if not os.path.exists("{}.json".format(question)):
+	if not os.path.exists("questions/{}.json".format(question)):
 		with open('tmp', 'w') as f:
 			f.write(open("getQuestion.sh").read().replace("$1", question))
-		os.system("chmod +x tmp && ./tmp > {}.json".format(question))
-		a = json.loads(open("{}.json".format(question)).read())
-		with open("{}.json".format(question), 'w') as f:
+		os.system("chmod +x tmp && ./tmp > questions/{}.json".format(question))
+		a = json.loads(open("questions/{}.json".format(question)).read())
+		with open("questions/{}.json".format(question), 'w') as f:
 			f.write(json.dumps(a, indent=4))
-	return open("{}.json".format(question)).read()
+	return open("questions/{}.json".format(question)).read()
 
 def ignore_question(question):
 	a = json.loads(get_question(question))["data"]["question"]["metaData"]
