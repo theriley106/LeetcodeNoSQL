@@ -3,7 +3,7 @@
 <p align="center">
 <img src ="static/screenshot.png" /></p>
 
-<h3>LeetcodeNoSQL is a chrome Chrome Extension to hide questions on Leetcode like this:</h3>
+<h3>LeetcodeNoSQL is a Chrome Extension to hide questions on Leetcode like this:</h3>
 
 <p align="center">
 <img src ="static/questionExample.png" width="700"/></p>
